@@ -86,8 +86,8 @@ h1 {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 80%;
+  height: 80%;
   background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
   box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
   border-radius: 30px;
@@ -99,4 +99,21 @@ h1 {
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.new-game {
+  position: absolute;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 2px solid #c0c0c0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.new-game:hover {
+  border: 2px solid #16d9e3;
+  color: #16d9e3;
 }
