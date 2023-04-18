@@ -7,7 +7,6 @@ let time = 0;
 let score = 0;
 
 startBtn.addEventListener("click", (event) => {
-  event.preventDefault();
   screens[0].classList.add("up");
 });
 
@@ -50,8 +49,16 @@ function setTime(value) {
 }
 
 function finishGame() {
-  timeEl.parentNode.classList.add("hide");
   board.innerHTML = `<h1>Your score: <span class="primary">${score}</span></h1>`;
+  const newGameBtn = document.createElement("button");
+  newGameBtn.type = "button";
+  newGameBtn.innerHTML = "New Game";
+  newGameBtn.className = "new-game";
+  board.appendChild(newGameBtn);
+  newGameBtn.style.top = "80%";
+  newGameBtn.addEventListener("click", () => {
+    newGame();
+  });
 }
 
 function createRandomCircle() {
@@ -71,4 +78,8 @@ function createRandomCircle() {
 
 function getRandomNumber(min, max) {
   return Math.round(Math.random() * (max - min) + min);
+}
+
+function newGame() {
+  window.location.reload();
 }
